@@ -1,0 +1,201 @@
+:root {
+  --black: #050405;
+  --light: #fff;
+  --cream: #f9ecdf;
+  --brown: #201818;
+  --grey: #46454a;
+  --solid-cream: #b9937c;
+}
+@import url("animations.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('../gambar/bg1.jpg');
+  background-size: cover;
+}
+.background {
+  width: 100%;
+  height: 880px;
+  overflow: hidden;
+  position: relative;
+}
+.background img {
+  width: 2000px;
+  height: 900px;
+  transform: translate(-400px, -580px) rotate(-20deg);
+  opacity: .8;
+  animation: bg 2s ease-out;
+  user-select: none;
+  position: absolute;
+}
+.imgContainer {
+  position: absolute;
+  width: min(40vw, 480px);
+  height: min(40vw, 320px);
+  top: 100px;
+  left: 17%;
+  transform: translate(0, -50%);
+  border: 12px solid var(--cream);
+  padding: 5px;
+  border-radius: 15px;
+  animation: randomMoveSmooth 28s ease-in-out 1.8s infinite, inTop 1.8s ease-out;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  animation: randomMove 25s ease-in-out infinite 1.8s;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: skyblue;
+  position: absolute;
+  right: min(60vw, 18%);
+  top: 90px;
+  animation: randomMoveSmooth 22s ease-in-out infinite, inOpacity 0.2s ease-out 0.4s backwards;
+  border: 3px solid var(--light);
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+.s2 {
+  width: 63px;
+  height: 63px;
+  border-radius: 100%;
+  background-color: lightgreen;
+  position: absolute;
+  right: min(60vw, 23%);
+  top: 190px;
+  animation: randomMoveSmooth 18s ease-in-out infinite, inOpacity 0.2s ease-out 0.8s backwards;
+  border: 3px solid var(--light);
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+.s3 {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: rgb(247,99,99);
+  position: absolute;
+  right: min(60vw, 17%);
+  top: 300px;
+  animation: randomMoveSmooth 20s ease-in-out infinite, inOpacity 0.2s ease-out 1.2s backwards;
+  border: 3px solid var(--light);
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+.glass {
+    position: absolute;
+    top: 500px;
+    width: 70%;
+    left: 50%; 
+    transform: translate(-50%, 0); 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: opacitys 0.5s;
+}
+.infContainer {
+  padding: 5px;
+  width: 40px;
+  height: 30px;
+  margin: 10px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.item {
+  width: 15px;
+  height: 15px;
+  margin-left:8px;
+  display: inline-block;
+}
+footer {
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .background {
+    height: 790px;
+  }
+  .imgContainer {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 80px;
+    left: 8%;
+    transform: translate(0, -50%);
+    border: 6px solid var(--cream);
+    padding: 3px;
+    border-radius: 9px;
+    animation: randomMoveSmooth 40s ease-in-out 1.8s infinite, inTop 1.8s ease-out;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+  }
+  .imgContainer img {
+    border-radius: 2px;
+    animation: randomMove 45s ease-in-out infinite 1.8s;
+  }
+  .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: skyblue;
+  position: absolute;
+  left: 310px;
+  top: 85px;
+  animation: randomMoveSmooth 28s ease-in-out infinite, inOpacity 0.2s ease-out 0.4s backwards;
+  border: 2px solid var(--light);
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+  .s2 {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: lightgreen;
+  position: absolute;
+  left: 290px;
+  top: 110px;
+  animation: randomMoveSmooth 26s ease-in-out infinite, inOpacity 0.2s ease-out 0.8s backwards;
+  border: 2px solid var(--light);
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+  .s3 {
+  width: 23px;
+  height: 23px;
+  border-radius: 100%;
+  background-color: rgb(247,99,99);
+  position: absolute;
+  left: 310px;
+  top: 140px;
+  animation: randomMoveSmooth 29s ease-in-out infinite, inOpacity 0.2s ease-out 1.2s backwards;
+  border: 2px solid var(--light);
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+  .glass {
+    position: absolute;
+    top: 270px;
+    width: 90%;
+    left: 50%; 
+    transform: translate(-50%, 0); 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: opacitys 0.5s;
+  }
+  footer {
+    padding: 10px;
+  }
+}

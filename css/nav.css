@@ -1,0 +1,145 @@
+:root {
+  --black: #050405;
+  --light: #fff;
+  --cream: #f9ecdf;
+  --brown: #201818;
+  --grey: #46454a;
+  --solid-cream: #b9937c;
+}
+.navbar {
+  z-index: 99;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@import url("animations.css");
+
+/* Animations */
+
+@keyframes kiri {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
+@keyframes pudar-ke-kiri {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes pudar {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+.pudar-ke-kiri {
+  animation: pudar-ke-kiri 0.7s ease-out;
+}
+.pudar {
+  animation: pudar 0.7s;
+}
+
+/* Navigator */
+
+ li a {
+  color: black;
+  padding:  0px 10px;
+  font-weight: 500px;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+.navbar {
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+}
+.logoSize {
+  margin: 8px;
+  width: 25px;
+  height: 25px;
+}
+.navigator {
+  display: flex;
+  margin: 8px;
+  list-style-type: none;
+}
+.navigator li {
+  display: inline-block;
+  padding: 0px 10px;
+  animation: pudar 0.3s;
+}
+a:hover {
+  color: var(--black);
+}
+a, a:focus, a:active {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.sidebar {
+  display: none;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.6);
+  box-shadow: 0px 0px 10px var(--grey);
+  width: 55%;
+  z-index: 99;
+  height: 70%;
+  border-bottom-left-radius: 10px;
+  list-style-type: none;
+  animation: topBar 0.3s;
+}
+.close {
+  justify-content: right;
+  margin: 8px 18px;
+}
+.sidebar a {
+  padding: 10px 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sidebar a:hover {
+  background-color: rgba(255,255,255,0.519);
+}
+.sidebar li:last-child {
+  border-bottom-left-radius: 10px;
+}
+.sidebar li:first-child {
+  margin-left: auto;
+}
+@media (min-width: 601px) {
+  .logoSize {
+    margin: 20px;
+    width: 35px;
+    height: 35px;
+  }
+  .navigator li {
+    display: inline-block;
+    padding: 20px 0px;
+    width: 35px;
+    height: 35px;
+  }
+  .sidebar {
+    display: none;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px var(--light);
+    width: 30%;
+    height: 70%;
+    border-bottom-left-radius: 10px;
+    list-style-type: none;
+  }
+  .close {
+    margin: 27px 28px;
+    justify-content: right;
+    transform: translate(0px, 0px);
+  }
+}

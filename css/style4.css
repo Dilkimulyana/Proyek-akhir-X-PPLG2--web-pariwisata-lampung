@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('../gambar/budaya/bg4,1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+.container {
+  width: 50%;
+  height: 500px;
+  margin: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  animation: opacitys 0.2s ;
+}
+.i1 {
+  animation: inBottom 0.8s ease-out 1s both;
+}
+.i2 {
+  animation: inBottom 0.8s ease-out 1.2s both;
+}
+.i3 {
+  animation: inBottom 0.8s ease-out 1.4s both;
+}
+.container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  z-index: -1;
+  box-shadow: -3px 3px 5px 3px rgba(0,0,0,0.3);
+}
+.container h2 {
+  font-size: 3.5em;
+  color: #054204;
+  z-index: -1;
+  position: relative;
+  animation: colors 2s ease-out 1s both;
+}
+.container h2::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: #c0de78;
+  position: absolute;
+  bottom: 0;
+  z-index: -2;
+  left: 0;
+  animation: halfCool 1s ease-in-out 1s both;
+}
+.container h2::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: #054204;
+  position: absolute;
+  bottom: 0;
+  left: 0;;
+  animation: cool 1s ease-in-out 2s both;
+}
+.container div {
+  display: inline-block;
+}
+.imageContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: auto;
+  z-index: -3;
+  overflow: hidden;
+}
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  animation: inRightLinear2 1s ease-in-out 0.3s both;
+}
+.infContainer {
+  padding: 5px;
+  width: 40px;
+  height: 30px;
+  margin: 10px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.item {
+  width: 15px;
+  height: 15px;
+  margin-left:8px;
+  display: inline-block;
+}
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+}
+/* mobile */
+@media (max-width: 900px) {
+  body {
+    justify-content: flex-end;
+    background-position: left;
+  }
+  .imageContainer {
+    height: auto;
+    width: 100%;
+  }
+  .imageContainer img {
+    animation: inTopLinear 1s;
+  }
+  .container {
+    position: relative;
+    top: 15vh;
+    width: 94%;
+    height: auto;
+    margin: auto;
+    gap: 5px;
+    padding: 10px;
+  }
+  .container h2 {
+    font-size: 2em;
+    color: #2d531a;
+    position: relative;
+  }
+  footer {
+    padding: 10px;
+  }
+}
+/* navbar */
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+  animation: inTopLinear 0.3s;
+}
